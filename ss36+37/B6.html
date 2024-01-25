@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        #result {
+            margin-top: 20px;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="studentForm">
+        <label for="studentId">Student ID  <input type="text" id="studentId" name="studentId" maxlength="6" required></label> 
+        <label for="studentName">Student Name  <input type="text" id="studentName" name="studentName" required></label>
+        <label for="age">Age <input type="number" id="age" name="age" min="18" required></label>
+        <label for="phone">Phone <input type="tel" id="phone" name="phone" pattern="[0-9]{10,11}" required></label>
+        <label for="email">Email <input type="email" id="email" name="email" required></label>
+        <button type="button" onclick="createStudent()">Create</button>
+    </form>
+    <div id="result"></div>
+    <script src="./B6.js"></script>
+</body>
+</html>
